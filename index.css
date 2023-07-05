@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background-color: rgb(24, 24, 24);
+  background-image: url(https://images.unsplash.com/photo-1634655377962-e6e7b446e7e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+#app > * {
+  display: flex;
+}
+
+#app p {
+  font-size: clamp(16px 20px 32px);
+  letter-spacing: 2px;
+
+  background-color: rgba(240, 248, 255, 0.856);
+
+  margin-left: 10px;
+  height: fit-content;
+
+  padding: 10px;
+
+  border-radius: 20px;
+
+  color: rgb(42, 50, 58);
+
+  cursor: default;
+}
+
+#app {
+  display: grid;
+
+grid-template: 
+  "A B B" 1fr
+  "A B B" 2fr
+  "A C D" 2fr / 
+   2fr 1fr 1fr;
+
+  gap: 30px;
+  padding: 30px;
+  
+  height: 100vh;
+  box-sizing: border-box;
+
+}
+
+#app header {
+  grid-area: A;
+  background-image: url(https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#app main {
+  grid-area: B;
+  background-image: url(https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#app aside {
+  background-image: url(https://images.unsplash.com/photo-1504788363733-507549153474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#app footer {
+  background-image: url(https://images.unsplash.com/photo-1445543949571-ffc3e0e2f55e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+@media (max-width: 768px) {
+
+  #app {
+    grid-template: 
+    "A B " 1fr
+    "C D " 1fr / 
+    1fr 1fr;
+  }
+
+}
+
+@media (max-width: 560px) {
+  #app {
+    grid-template: 
+    "A" 1fr
+    "B" 1fr
+    "C" 1fr 
+    "D" 1fr / 
+    1fr;
+  }
+}
